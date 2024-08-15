@@ -13,33 +13,23 @@ export const useNativeCurrencyPrice = () => {
   const nativeCurrencyPrice = useGlobalState(
     (state) => state.nativeCurrencyPrice,
   );
-  const strkCurrencyPrice = useGlobalState((state) => state.strkCurrencyPrice);
   const setNativeCurrencyPrice = useGlobalState(
     (state) => state.setNativeCurrencyPrice,
   );
-  const setStrkCurrencyPrice = useGlobalState(
-    (state) => state.setStrkCurrencyPrice,
-  );
-  // Get the price of ETH & STRK from Coingecko on mount
+  // Get the price of ETH from Coingecko on mount
   useEffect(() => {
     (async () => {
       if (nativeCurrencyPrice == 0) {
-        const price = await fetchPriceFromCoingecko("ETH");
+        const price = await fetchPriceFromCoingecko(targetNetwork);
         setNativeCurrencyPrice(price);
-      }
-      if (strkCurrencyPrice == 0) {
-        const strkPrice = await fetchPriceFromCoingecko("STRK");
-        setStrkCurrencyPrice(strkPrice);
       }
     })();
   }, [targetNetwork]);
 
-  // Get the price of ETH & STRK from Coingecko at a given interval
+  // Get the price of ETH from Coingecko at a given interval
   useInterval(async () => {
-    const price = await fetchPriceFromCoingecko("ETH");
+    const price = await fetchPriceFromCoingecko(targetNetwork);
     setNativeCurrencyPrice(price);
-    const strkPrice = await fetchPriceFromCoingecko("STRK");
-    setStrkCurrencyPrice(strkPrice);
   }, scaffoldConfig.pollingInterval);
 
   //return nativeCurrencyPrice;

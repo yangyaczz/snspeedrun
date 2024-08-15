@@ -63,9 +63,7 @@ export enum ContractCodeStatus {
 export type GenericContract = {
   address: Address;
   abi: Abi;
-  classHash: String;
 };
-
 export type GenericContractsDeclaration = {
   [network: string]: {
     [contractName: string]: GenericContract;
@@ -611,7 +609,6 @@ export function parseParamWithType(
           }, [] as any[]);
         }
       } catch (err) {
-        //console.log(err);
         return param;
       }
     }

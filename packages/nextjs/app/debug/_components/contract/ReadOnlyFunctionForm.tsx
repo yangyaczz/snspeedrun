@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Abi } from "abi-wan-kanabi";
 import { Address } from "@starknet-react/chains";
 import {
@@ -38,7 +38,7 @@ export const ReadOnlyFunctionForm = ({
     functionName: abiFunction.name,
     abi: [...abi],
     args: inputValue ? inputValue.flat(Infinity) : [],
-    enabled: Boolean(inputValue),
+    enabled: false,
     parseArgs: false,
     blockIdentifier: "pending" as BlockNumber,
   });
@@ -59,14 +59,14 @@ export const ReadOnlyFunctionForm = ({
     );
   });
 
-  const handleRead = useCallback(() => {
+  const handleRead = () => {
     const newInputValue = getParsedContractFunctionArgs(form, false);
     if (JSON.stringify(form) !== JSON.stringify(lastForm.current)) {
       setInputValue(newInputValue);
       lastForm.current = form;
     }
     refetch();
-  }, [form, refetch]);
+  };
 
   return (
     <div className="flex flex-col gap-3 py-5 first:pt-0 last:pb-1">
@@ -85,7 +85,6 @@ export const ReadOnlyFunctionForm = ({
             </div>
           )}
         </div>
-
         <div
           className={`flex ${
             formErrorMessage &&
