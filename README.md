@@ -200,7 +200,7 @@ Your `Staker UI` tab should be almost done and working at this point.
 
 ---
 
-## Checkpoint 3: 💵 UX 🙎
+## Checkpoint 3: UX 🙎
 
 ### 🥅 Goals
 
@@ -227,26 +227,30 @@ Your `Staker UI` tab should be almost done and working at this point.
 
 ## Checkpoint 4: 💾 Deploy your contract! 🛰
 
-📡 Edit the `defaultNetwork` to choose `Sepolia` public Starknet network in `packages/nextjs/scaffold.config.ts`
+📡 Find the `packages/nextjs/scaffold.config.ts` file and change the `targetNetworks` to `[chains.sepolia]`.
 
   ![network](https://raw.githubusercontent.com/Quantum3-Labs/speedrunstark/simple-nft-example/packages/nextjs/public/ch0-scaffold-config.png)
 
-🔐 You will need to generate a **deployer address** using Argent or Braavos wallet, get your account address and private key and put in `packages/snfoundry/.env`
+🔐 Prepare your environment variables.
 
-⛽️ You will need to send ETH to your deployer address with your wallet, or get it from a public faucet.
+> Find the `packages/snfoundry/.env` file and fill the env variables related to Sepolia testnet with your own contract address and private key.
+
+⛽️ You will need to get some `ETH` or `STRK` Sepolia tokens to deploy your contract to Sepolia testnet.
 
 > 📝 If you plan on submitting this challenge, be sure to set your deadline to at least block.timestamp + 72 hours
 
 🚀 Run yarn deploy --network [network] to deploy your smart contract to a public network (mainnet or sepolia).
 
+> you input `yarn deploy --network sepolia`.
+
 ![allStakings-blockFrom](./packages/nextjs/public/ch1-events.png)
 
-> 💬 Hint: For faster loading of your "Stake Events" page, consider updating the fromBlock passed to useScaffoldEventHistory in [packages/nextjs/app/stakings/page.tsx](https://github.com/scaffold-eth/speedrunstark/blob/challenge-1-decentralized-staking/packages/nextjs/app/stakings/page.tsx) to `blocknumber - 10` at which your contract was deployed. Example: `fromBlock: 3750241n` (where `n` represents its a [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)).
+> 💬 Hint: For faster loading of your "Stake Events" page, consider updating the fromBlock passed to useScaffoldEventHistory in [packages/nextjs/app/stakings/page.tsx](https://github.com/scaffold-eth/speedrunstark/blob/challenge-1-decentralized-staking/packages/nextjs/app/stakings/page.tsx) to `blocknumber - 10` at which your contract was deployed. Example: `fromBlock: 3750241n` (where `n` represents its a [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)). To find this blocknumber, search your contract's address on Starkscan and find the `Contract Creation` transaction line.
 ---
 
 ## Checkpoint 5: 🚢 Ship your frontend! 🚁
 
-✏️ Edit your frontend config in `packages/nextjs/scaffold.config.ts` to change the targetNetwork to `chains.sepolia`.
+> 🦊 Since we have deployed to a public testnet, you will now need to connect using a wallet you own(Argent X or Braavos).
 
 💻 View your frontend at <http://localhost:3000/stakerUI> and verify you see the correct network.
 
@@ -257,8 +261,6 @@ Your `Staker UI` tab should be almost done and working at this point.
 > Follow the steps to deploy to Vercel. Once you log in (email, github, etc), the default options should work. It'll give you a public URL.
 
 > If you want to redeploy to the same production URL you can run `yarn vercel --prod`. If you omit the `--prod` flag it will deploy it to a preview/test URL.
-
-> 🦊 Since we have deployed to a public testnet, you will now need to connect using a wallet you own or use a burner wallet. By default 🔥 burner wallets are only available on devnet. You can enable them on every chain by setting `onlyLocalBurnerWallet: false` in your frontend config (`scaffold.config.ts` in `packages/nextjs/`)
 
 #### Configuration of Third-Party Services for Production-Grade Apps
 
