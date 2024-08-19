@@ -26,9 +26,7 @@ export const StakeContractInteraction = ({ address }: { address?: string }) => {
   const { value: stakerContractBalance } = useScaffoldEthBalance({
     address: StakerContract?.address,
   });
-  const {
-    value: exampleExternalContractBalance,
-  } = useScaffoldEthBalance({
+  const { value: exampleExternalContractBalance } = useScaffoldEthBalance({
     address: ExampleExternalContact?.address,
   });
 

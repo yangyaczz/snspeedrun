@@ -107,6 +107,7 @@ First, you have to define your constructor function in the `Staker` contract:
         eth_contract: ContractAddress,
   ...
     ) 
+```
 
 Then, pass the `eth_contract` address as an argument to the `deployContract` function in the `deploy.ts` file:
 
@@ -130,7 +131,7 @@ use openzeppelin::token::erc20::interface::{IERC20CamelDispatcher, IERC20CamelDi
 In the constructor function, instantiate the `IERC20CamelDispatcher` struct with the address of the ETH contract address:
 
 ```cairo
-        self.eth_token_dispatcher.write(IERC20CamelDispatcher { contract_address: eth_contract });
+self.eth_token_dispatcher.write(IERC20CamelDispatcher { contract_address: eth_contract });
 ```
 
 With the dispatcher set up, you can now utilize functions defined in the interface, such as `transfer`, `transferFrom`, and `balanceOf`, to manage ETH transactions effectively.
@@ -139,7 +140,7 @@ With the dispatcher set up, you can now utilize functions defined in the interfa
 
 > 👩‍💻 Write your `stake()` function and test it with the `Debug Contracts` tab in the frontend.
 
-![debugContracts](https://raw.githubusercontent.com/Quantum3-Labs/speedrunstark/decentralized-staking/packages/nextjs/public/ch1-debug.png)
+![debugContracts](./packages/nextjs/public/ch1-debug.png)
 
 ### 🥅 Goals
 
@@ -147,7 +148,7 @@ With the dispatcher set up, you can now utilize functions defined in the interfa
 - [ ] Is your `balance` correctly tracked?
 - [ ] Do you see the events in the `Stake Events` tab?
 
-  ![allStakings](https://raw.githubusercontent.com/Quantum3-Labs/speedrunstark/decentralized-staking/packages/nextjs/public/ch1-events.png)
+  ![allStakings](./packages/nextjs/public/ch1-events.png)
 
 ---
 
@@ -183,7 +184,7 @@ You'll have 60 seconds after deploying until the deadline is reached, you can ad
 
 ⏳ _"Time Left"_ will only update if a transaction occurs. You can see the time update by getting funds from the faucet button in navbar just to trigger a new block.
 
-![stakerUI](https://raw.githubusercontent.com/Quantum3-Labs/speedrunstark/decentralized-staking/packages/nextjs/public/ch1-staker.png)
+![stakerUI](.packages/nextjs/public/ch1-staker.png)
 
 > 👩‍💻 You can call `yarn deploy:reset` any time you want a fresh contract, it will get re-deployed even if there are no changes on it.  
 > You may need it when you want to reload the _"Time Left"_ of your tests.
@@ -229,7 +230,7 @@ Your `Staker UI` tab should be almost done and working at this point.
 
 📡 Find the `packages/nextjs/scaffold.config.ts` file and change the `targetNetworks` to `[chains.sepolia]`.
 
-  ![network](https://raw.githubusercontent.com/Quantum3-Labs/speedrunstark/simple-nft-example/packages/nextjs/public/ch0-scaffold-config.png)
+  ![network](./packages/nextjs/public/ch1-scaffold-config.png)
 
 🔐 Prepare your environment variables.
 

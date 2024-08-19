@@ -70,7 +70,7 @@ pub mod Staker {
         fn stake(
             ref self: ContractState, amount: u256
         ) { // Note: In UI and Debug contract `sender` should call `approve`` before to `transfer` the amount to the staker contract
-            //self.emit(Stake { sender, amount }); // ToDo Checkpoint 1: Uncomment to emit the Stake event
+        //self.emit(Stake { sender, amount }); // ToDo Checkpoint 1: Uncomment to emit the Stake event
         }
 
         // Function to execute the transfer or allow withdrawals after the deadline
@@ -79,12 +79,10 @@ pub mod Staker {
         // Otherwise, we should call `open_for_withdraw` function
         // ToDo Checkpoint 3: Assert that the staking period has ended
         // ToDo Checkpoint 3: Protect the function calling `not_completed` function before the execution
-        fn execute(ref self: ContractState) {
-        }
+        fn execute(ref self: ContractState) {}
 
         // ToDo Checkpoint 3: Implement your `withdraw` function here
-        fn withdraw(ref self: ContractState) {
-        }
+        fn withdraw(ref self: ContractState) {}
 
         fn balances(self: @ContractState, account: ContractAddress) -> u256 {
             self.balances.read(account)
@@ -130,13 +128,9 @@ pub mod Staker {
         // This function should be called after the deadline has passed and the staked amount is greater than or equal to the threshold
         // You have to call/use this function in the above `execute` function
         // This function should call the `complete` function of the external contract and transfer the staked amount to the external contract
-        fn complete_transfer(
-            ref self: ContractState, amount: u256
-        ) { 
-            // Note: Staker contract should approve to transfer the staked_amount to the external contract
+        fn complete_transfer(ref self: ContractState, amount: u256) {// Note: Staker contract should approve to transfer the staked_amount to the external contract
         }
         // ToDo Checkpoint 3: Implement your not_completed function here
-        fn not_completed(ref self: ContractState) {
-        }
+        fn not_completed(ref self: ContractState) {}
     }
 }
