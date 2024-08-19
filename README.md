@@ -241,7 +241,7 @@ In `Vendor.cairo` you will need to add one more input parameter to setup the `ow
 
 📡 Find the `packages/nextjs/scaffold.config.ts` file and change the `targetNetworks` to `[chains.sepolia]`.
 
-![network](./packages/nextjs/public/ch0-scaffold-config.png)
+![network](./packages/nextjs/public/ch2-scaffold-config.png)
 
 🔐 Prepare your environment variables.
 
