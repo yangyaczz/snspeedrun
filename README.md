@@ -37,7 +37,6 @@ Then download the challenge to your computer and install dependencies by running
 git clone https://github.com/Quantum3-Labs/speedrunstark.git challenge-1-decentralized-staking
 cd challenge-1-decentralized-staking
 git checkout challenge-1-decentralized-staking
-
 yarn install
 ```
 
