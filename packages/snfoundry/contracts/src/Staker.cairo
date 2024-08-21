@@ -128,7 +128,9 @@ pub mod Staker {
         // This function should be called after the deadline has passed and the staked amount is greater than or equal to the threshold
         // You have to call/use this function in the above `execute` function
         // This function should call the `complete` function of the external contract and transfer the staked amount to the external contract
-        fn complete_transfer(ref self: ContractState, amount: u256) {// Note: Staker contract should approve to transfer the staked_amount to the external contract
+        fn complete_transfer(
+            ref self: ContractState, amount: u256
+        ) { // Note: Staker contract should approve to transfer the staked_amount to the external contract
         }
         // ToDo Checkpoint 3: Implement your not_completed function here
         fn not_completed(ref self: ContractState) {}

@@ -1,7 +1,10 @@
 import { Abi } from "abi-wan-kanabi";
 import {
+  AbiFunction,
   Contract,
   ContractName,
+  GenericContract,
+  InheritedFunctions,
   getFunctionsByStateMutability,
 } from "~~/utils/scaffold-stark/contract";
 import { ReadOnlyFunctionForm } from "./ReadOnlyFunctionForm";
@@ -29,7 +32,7 @@ export const ContractReadMethods = ({
       };
     });
   if (!functionsToDisplay.length) {
-    return <span className="text-neutral">No read methods</span>;
+    return <>No read methods</>;
   }
   return (
     <>
