@@ -40,7 +40,6 @@ Then download the challenge to your computer and install dependencies by running
 git clone https://github.com/Quantum3-Labs/speedrunstark.git challenge-3-dice-game
 cd challenge-3-dice-game
 git checkout challenge-3-dice-game
-
 yarn install
 ```
 
