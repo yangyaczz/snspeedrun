@@ -169,7 +169,13 @@ self.deadline.write(get_block_timestamp() + 60);
 
 > Check the `ExampleExternalContract.cairo` for the bool you can use to test if it has been completed or not. But do not edit the `ExampleExternalContract.cairo` as it can slow the auto grading.
 
-If the staked amount of the contract `let staked_amount = self.eth_token_dispatcher.read().balanceOf(get_contract_address())` is over the `threshold` by the `deadline`, you will want to call: `self.complete_transfer(staked_amount)`. This will send the funds to the `ExampleExternalContract` and call `complete()`.
+If the staked amount of the contract:
+
+```cairo
+let staked_amount = self.eth_token_dispatcher.read().balanceOf(get_contract_address())
+```
+
+Is over the `threshold` by the `deadline`, you will want to call: `self.complete_transfer(staked_amount)`. This will send the funds to the `ExampleExternalContract` and call `complete()`.
 
 If the balance is less than the `threshold`, you want to set a `open_for_withdraw` bool to `true` which will allow users to `withdraw()` their funds.
 
@@ -183,7 +189,7 @@ You'll have 60 seconds after deploying until the deadline is reached, you can ad
 
 ⏳ _"Time Left"_ will only update if a transaction occurs. You can see the time update by getting funds from the faucet button in navbar just to trigger a new block.
 
-![stakerUI](.packages/nextjs/public/ch1-staker.png)
+![stakerUI](./packages/nextjs/public/ch1-staker.png)
 
 > 👩‍💻 You can call `yarn deploy:reset` any time you want a fresh contract, it will get re-deployed even if there are no changes on it.  
 > You may need it when you want to reload the _"Time Left"_ of your tests.
