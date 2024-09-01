@@ -70,7 +70,13 @@ yarn start
 
 > 👩‍💻 Look at `YourToken.cairo` how it reuses the **ERC20** token standard from OpenZeppelin. To accomplish this, we used [`Cairo Components`](https://book.cairo-lang.org/ch16-02-00-composability-and-components.html) to embed the `ERC20` logic inside your contract.
 
-> You have to mint **2000** (\* 10 \*\* 18) to your frontend address using the `constructor()`. In devnet, by default we choose the first pre-deployed account: `0x64b48806902a367c8598f4f95c305e8c1a1acba5f082d294a43793113115691`, to deploy the contracts. In order to complete this checkpoint, you need to connect to devnet using the same address. In testnet, you can use your own address to deploy the contracts. Edit the .env file in the `snfoundry` package to set the `ACCOUNT_ADDRESS_SEPOLIA` to your own address.
+> You have to mint **2000** (\* 10 \*\* 18) `YourToken` token (it is also named `GLD` token) to your frontend address using the `constructor()`. In devnet, by default we choose the first pre-deployed account that `yarn chain` generate for us to deploy the contracts:
+
+```bash
+| Account address |  0x64b48806902a367c8598f4f95c305e8c1a1acba5f082d294a43793113115691 
+```
+
+In order to complete this checkpoint, you need to connect to devnet using the same address. In testnet, you can use your own address to deploy the contracts. Edit the .env file in the `snfoundry` package to set the `ACCOUNT_ADDRESS_SEPOLIA` to your own address.
 
 (Your frontend address is the address in the top right of <http://localhost:3000>)
 
