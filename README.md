@@ -257,7 +257,7 @@ In `Vendor.cairo` you will need to add one more input parameter to setup the `ow
 
 🔐 Prepare your environment variables.
 
-> Find the `packages/snfoundry/.env` file and fill the env variables related to Sepolia testnet with your own contract address and private key.
+> Find the `packages/snfoundry/.env` file and fill the env variables related to Sepolia testnet with your own wallet account address and private key.
 
 ⛽️ You will need to get some `ETH` or `STRK` Sepolia tokens to deploy your contract to Sepolia testnet.
 
