@@ -169,7 +169,7 @@ const DiceGame: NextPage = () => {
           <div className="flex items-center mt-1">
             <span className="text-lg mr-2">Prize:</span>
             <Amount
-              amount={prize ? Number(formatEther(prize.toString())) : 0}
+              amount={prize ? Number(formatEther(prize.toString())) * 10 : 0}
               showUsdPrice
               className="text-lg"
             />
