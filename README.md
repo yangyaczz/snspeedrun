@@ -80,7 +80,7 @@ yarn start
 
 ## Checkpoint 1: 🥩 Staking 💵
 
-You'll need to track individual `balances` using a LegacyMap:
+You'll need to track individual `balances` using a Map:
 
 ```cairo
 #[storage]
