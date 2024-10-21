@@ -21,6 +21,7 @@ const TokenVendor: NextPage = () => {
   const [tokensToSend, setTokensToSend] = useState("");
   const [tokensToBuy, setTokensToBuy] = useState<string | bigint>("");
   const [tokensToSell, setTokensToSell] = useState<string>("");
+  const [isApproved, setIsApproved] = useState(false);
 
   const { address: connectedAddress } = useAccount();
   const { data: yourTokenSymbol } = useScaffoldReadContract({
