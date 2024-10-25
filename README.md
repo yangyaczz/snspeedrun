@@ -1,8 +1,8 @@
 # 🚩 Challenge #0: 🎟 Simple NFT Example
 
-sepolia smart contract address: 0x06dd0e335127628b3d8eff033f4e307bda0276ef7fc3a2193dcc87ed56d4759a
-mint nft tx: https://sepolia.voyager.online/tx/0x05c902c89c270907d0405c80887d875e7837cf135f156ce3d061cd732b2d0b2f#overview
-vercel: https://nextjs-23bol002n-yyczs-projects.vercel.app
+- sepolia smart contract address: 0x06dd0e335127628b3d8eff033f4e307bda0276ef7fc3a2193dcc87ed56d4759a
+- mint nft tx: https://sepolia.voyager.online/tx/0x05c902c89c270907d0405c80887d875e7837cf135f156ce3d061cd732b2d0b2f#overview
+- vercel: https://nextjs-23bol002n-yyczs-projects.vercel.app
 
 ![readme-0](./packages/nextjs/public/hero.png)
 
