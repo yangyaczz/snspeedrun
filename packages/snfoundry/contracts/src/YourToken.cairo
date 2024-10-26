@@ -50,7 +50,6 @@ mod YourToken {
 
         let fixed_supply: u256 = 2_000_000_000_000_000_000_000;
         self.erc20.mint(recipient, fixed_supply);
-
     }
 
     #[abi(embed_v0)]

@@ -145,7 +145,6 @@ const TokenVendor: NextPage = () => {
             </span>
             <span className="font-bold ml-1">{ethSymbol}</span>
           </div>
-
         </div>
 
         {/* ToDo Checkpoint 2: Uncomment Buy Tokens */}
@@ -168,7 +167,6 @@ const TokenVendor: NextPage = () => {
             Buy Tokens
           </button>
         </div>
-
 
         {!!yourTokenBalance && (
           <div className="flex flex-col items-center space-y-4 bg-base-100 border-8 border-secondary rounded-xl p-6 mt-8 w-full max-w-lg">
