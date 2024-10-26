@@ -3,8 +3,8 @@
 - staker contract: 0x77d799843bc5110cda635fba35e29b9ce8daad9fc906e729501fae7e38384f3
 - ExampleExternalContract contract: 0x2f4c84325b5a381efed5546310d5f3e72766423c52349b7eba0ade92aaec5ef
 - stake tx: 0x429e3aea3909c4492f66c6d963d5c0e85a3a9e23a1a3370a91fe4d6fef66020
-- execute tx: 
-- withdraw tx: 
+- execute tx: 0x70fb817d42644cc64557dce388b560380e24935e7144c1e2d4800ba383eaa36
+- withdraw tx: 0x4b657d78be78a5a45d50f11ff6d1a2f87fb99fdaf048ace5936518eeb3525c4
 - vercel: https://nextjs-ph61m20go-yyczs-projects.vercel.app/
 
 ![readme-1](./packages/nextjs/public/banner-decentralized-staking.svg)
