@@ -65,7 +65,7 @@ pub mod Staker {
         self.external_contract_dispatcher.write( IExampleExternalContractDispatcher {contract_address: external_contract_address});
         // ToDo Checkpoint 2: Set the deadline to 60 seconds from now. Implement your code here.
 
-        self.deadline.write(get_block_timestamp() + 6000);
+        self.deadline.write(get_block_timestamp() + 60);
 
     }
 
