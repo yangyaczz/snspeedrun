@@ -55,18 +55,21 @@ pub mod Staker {
     }
 
     #[constructor]
-    pub fn constructor( 
+    pub fn constructor(
         ref self: ContractState,
         eth_contract: ContractAddress,
         external_contract_address: ContractAddress
     ) {
         self.eth_token_dispatcher.write(IERC20CamelDispatcher { contract_address: eth_contract });
         self.external_contract_address.write(external_contract_address);
-        self.external_contract_dispatcher.write( IExampleExternalContractDispatcher {contract_address: external_contract_address});
+        self
+            .external_contract_dispatcher
+            .write(
+                IExampleExternalContractDispatcher { contract_address: external_contract_address }
+            );
         // ToDo Checkpoint 2: Set the deadline to 60 seconds from now. Implement your code here.
 
         self.deadline.write(get_block_timestamp() + 60);
-
     }
 
     #[abi(embed_v0)]
@@ -76,8 +79,8 @@ pub mod Staker {
         fn stake(
             ref self: ContractState, amount: u256
         ) { // Note: In UI and Debug contract `sender` should call `approve`` before to `transfer` the amount to the staker contract
-        //self.emit(Stake { sender, amount }); // ToDo Checkpoint 1: Uncomment to emit the Stake
-        //event
+            //self.emit(Stake { sender, amount }); // ToDo Checkpoint 1: Uncomment to emit the Stake
+            //event
 
             assert(get_block_timestamp() <= self.deadline(), 'time out');
 
@@ -89,8 +92,7 @@ pub mod Staker {
 
             self.balances.write(caller, self.balances.read(caller) + amount);
 
-            self.emit( Stake {sender: caller, amount});
-
+            self.emit(Stake { sender: caller, amount });
         }
 
         // Function to execute the transfer or allow withdrawals after the deadline
@@ -116,7 +118,7 @@ pub mod Staker {
         // ToDo Checkpoint 3: Implement your `withdraw` function here
         fn withdraw(ref self: ContractState) {
             assert(self.open_for_withdraw(), 'open_for_withdraw is false');
-            
+
             let caller = get_caller_address();
             let amount = self.balances(caller);
             assert(amount > 0, 'no balance');
@@ -163,7 +165,6 @@ pub mod Staker {
         }
         // ToDo Checkpoint 2: Implement your time_left function here
         fn time_left(self: @ContractState) -> u64 {
-            
             let now = get_block_timestamp();
             let ddl = self.deadline();
             if now >= ddl {
