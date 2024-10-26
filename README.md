@@ -1,3 +1,36 @@
+# SpeedRun:
+
+- challenge0:
+    - [github](https://github.com/yangyaczz/snspeedrun/tree/challenge-0-simple-nft)
+    - [NFT contract](https://sepolia.voyager.online/contract/0x06dd0e335127628b3d8eff033f4e307bda0276ef7fc3a2193dcc87ed56d4759a#accountCalls)
+    - [vercel](https://nextjs-23bol002n-yyczs-projects.vercel.app)
+
+- challenge1:
+    - [github](https://github.com/yangyaczz/snspeedrun/tree/challenge-1-decentralized-staking)
+    - [Staker contract](https://sepolia.voyager.online/contract/0x77d799843bc5110cda635fba35e29b9ce8daad9fc906e729501fae7e38384f3#accountCalls)
+    - [ExampleExternalContract](https://sepolia.voyager.online/contract/0x02f4c84325b5a381efed5546310d5f3e72766423c52349b7eba0ade92aaec5ef#readContract)
+    - [execute tx](https://sepolia.voyager.online/tx/0x70fb817d42644cc64557dce388b560380e24935e7144c1e2d4800ba383eaa36)
+    - [withdraw tx](https://sepolia.voyager.online/tx/0x4b657d78be78a5a45d50f11ff6d1a2f87fb99fdaf048ace5936518eeb3525c4)
+    - [vercel](https://nextjs-ph61m20go-yyczs-projects.vercel.app/)
+
+- challenge2:
+    - [github](https://github.com/yangyaczz/snspeedrun/tree/challenge-2-token-vendor)
+    - [YoutToken contract](https://sepolia.voyager.online/contract/0x031a4cdfc78c332a0df6d3d97b0fa22f18111c9b10d81a0cb98b3be2408599e5)
+    - [Vendor contract](https://sepolia.voyager.online/contract/0x41a7d5aa4428ecb8febb9441ec47e65ad68c7b3c1d7a343066958e319991948)
+    - [buy tx](https://sepolia.voyager.online/tx/0x21c86942beea9d5f71a74f47fe3c446a2948fb14722241392cbb68bd0e8df1b)
+    - [sell tx](https://sepolia.voyager.online/tx/0x45f8345dc83c760460f5e9f6239452a6016f687fce5e5114924f8348dafdfcd)
+    - [vercel](https://nextjs-3fdetay4h-yyczs-projects.vercel.app)
+
+- challenge3:
+    - [github](https://github.com/yangyaczz/snspeedrun/tree/challenge-3-dice-game)
+    - [DiceGame contract](https://sepolia.voyager.online/contract/0x05b5eaa3f6b77fa15e5cdf857da18f100dc7563abf40084c8fc56f6dcdb842cf)
+    - [RiggedRoll contract](https://sepolia.voyager.online/contract/0x07dcd03916aac05579bb14af86a21c362d38f0a1fa8b50346dcefa5bad6222d0)
+    - [riggend roll tx](https://sepolia.voyager.online/tx/0x345eda517951856b2269967e66f14f388ba5f7052a9d40a6249f4a352ff9792)
+    - [withdraw tx](https://sepolia.voyager.online/tx/0x6089b6b248cc38a3352c8df3f266d2fbc3e05fd4364052f44bbd76e906a275a)
+    - [vercel](https://nextjs-p84h3owzx-yyczs-projects.vercel.app)
+
+
+
 # 🚩 Challenge #0: 🎟 Simple NFT Example
 
 - sepolia smart contract address: 0x06dd0e335127628b3d8eff033f4e307bda0276ef7fc3a2193dcc87ed56d4759a
