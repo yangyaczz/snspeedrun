@@ -1,5 +1,11 @@
 # 🚩 Challenge 3: 🎲 Dice Game
 
+- DiceGame contract: 0x5b5eaa3f6b77fa15e5cdf857da18f100dc7563abf40084c8fc56f6dcdb842cf
+- RiggedRoll contract: 0x7dcd03916aac05579bb14af86a21c362d38f0a1fa8b50346dcefa5bad6222d0
+- riggend roll tx: 0x345eda517951856b2269967e66f14f388ba5f7052a9d40a6249f4a352ff9792
+- withdraw tx: 0x6089b6b248cc38a3352c8df3f266d2fbc3e05fd4364052f44bbd76e906a275a
+- vercel: https://nextjs-p84h3owzx-yyczs-projects.vercel.app
+
 ![readme-3](./packages/nextjs/public/hero3.png)
 
 📚 This tutorial is meant for developers that already understand the 🖍️ basics: [Starklings](https://starklings.app/) or [Node Guardians](https://nodeguardians.io/campaigns?f=3%3D2)

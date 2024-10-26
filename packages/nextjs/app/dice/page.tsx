@@ -76,14 +76,14 @@ const DiceGame: NextPage = () => {
     useScaffoldEventHistory({
       contractName: "DiceGame",
       eventName: "contracts::DiceGame::DiceGame::Roll",
-      fromBlock: BigInt(0n),
+      fromBlock: BigInt(262577n),
       watch: true,
     });
   const { data: winnerHistoryData, isLoading: winnerHistoryLoading } =
     useScaffoldEventHistory({
       contractName: "DiceGame",
       eventName: "contracts::DiceGame::DiceGame::Winner",
-      fromBlock: BigInt(0n),
+      fromBlock: BigInt(262577n),
       watch: true,
     });
 
@@ -210,20 +210,20 @@ const DiceGame: NextPage = () => {
               />
             </div>
           </div>
-          {/*
-            <button
-              onClick={() => {
-                if (!rolled) {
-                  setRolled(true);
-                }
-                setIsRolling(true);
-                handleRigged();
-              }}
-              disabled={isRolling}
-              className="mt-2 btn btn-secondary bg-secondary btn-xl normal-case font-xl text-lg text-white"
-            >
-              Rigged Roll!
-            </button>*/}
+
+          <button
+            onClick={() => {
+              if (!rolled) {
+                setRolled(true);
+              }
+              setIsRolling(true);
+              handleRigged();
+            }}
+            disabled={isRolling}
+            className="mt-2 btn btn-secondary bg-secondary btn-xl normal-case font-xl text-lg text-white"
+          >
+            Rigged Roll!
+          </button>
 
           <div className="flex mt-8">
             {rolled ? (
