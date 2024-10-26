@@ -73,12 +73,12 @@ export const StakeContractInteraction = ({ address }: { address?: string }) => {
       {
         contractName: "Eth",
         functionName: "approve",
-        args: [StakerContract?.address ?? "", 5 * 10 ** 17],
+        args: [StakerContract?.address ?? "", 5 * 10 ** 16],
       },
       {
         contractName: "Staker",
         functionName: "stake",
-        args: [5 * 10 ** 17],
+        args: [5 * 10 ** 16],
       },
     ],
   });
@@ -191,7 +191,7 @@ export const StakeContractInteraction = ({ address }: { address?: string }) => {
             className="btn btn-secondary uppercase text-white"
             onClick={wrapInTryCatch(stakeEth, "stakeETH")}
           >
-            🥩 Stake 0.5 ether!
+            🥩 Stake 0.05 ether!
           </button>
         </div>
       </div>

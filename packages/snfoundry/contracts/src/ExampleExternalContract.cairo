@@ -6,7 +6,7 @@ pub trait IExampleExternalContract<T> {
 
 #[starknet::contract]
 mod ExampleExternalContract {
-    #[storage]
+    #[storage] 
     struct Storage {
         completed: bool,
     }

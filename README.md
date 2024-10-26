@@ -1,5 +1,12 @@
 # 🚩 Challenge #1: 🔏 Decentralized Staking App
 
+- staker contract: 0x77d799843bc5110cda635fba35e29b9ce8daad9fc906e729501fae7e38384f3
+- ExampleExternalContract contract: 0x2f4c84325b5a381efed5546310d5f3e72766423c52349b7eba0ade92aaec5ef
+- stake tx: 0x429e3aea3909c4492f66c6d963d5c0e85a3a9e23a1a3370a91fe4d6fef66020
+- execute tx: 
+- withdraw tx: 
+- vercel: https://nextjs-ph61m20go-yyczs-projects.vercel.app/
+
 ![readme-1](./packages/nextjs/public/banner-decentralized-staking.svg)
 
 📚 This tutorial is meant for developers that already understand the 🖍️ basics: [Starklings](https://starklings.app/) or [Node Guardians](https://nodeguardians.io/campaigns?f=3%3D2)
