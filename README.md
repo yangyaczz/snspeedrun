@@ -1,5 +1,11 @@
 # 🚩 Challenge #2: 🏵 Token Vendor 🤖
 
+- YourToken contract: 0x31a4cdfc78c332a0df6d3d97b0fa22f18111c9b10d81a0cb98b3be2408599e5
+- Vendor contract: 0x41a7d5aa4428ecb8febb9441ec47e65ad68c7b3c1d7a343066958e319991948
+- buy tx: 0x21c86942beea9d5f71a74f47fe3c446a2948fb14722241392cbb68bd0e8df1b
+- sell tx: 0x45f8345dc83c760460f5e9f6239452a6016f687fce5e5114924f8348dafdfcd
+- vercel: https://nextjs-3fdetay4h-yyczs-projects.vercel.app
+
 ![readme-2](./packages/nextjs/public/hero2.png)
 
 📚 This tutorial is meant for developers that already understand the 🖍️ basics: [Starklings](https://starklings.app/) or [Node Guardians](https://nodeguardians.io/campaigns?f=3%3D2)

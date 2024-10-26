@@ -10,14 +10,14 @@ const Events: NextPage = () => {
     useScaffoldEventHistory({
       contractName: "Vendor",
       eventName: "contracts::Vendor::Vendor::BuyTokens",
-      fromBlock: 0n,
+      fromBlock: 262385n,
     });
 
   const { data: sellTokenEvents, isLoading: isSellEventsLoading } =
     useScaffoldEventHistory({
       contractName: "Vendor",
       eventName: "contracts::Vendor::Vendor::SellTokens",
-      fromBlock: 0n,
+      fromBlock: 262385n,
     });
 
   return (
@@ -68,7 +68,7 @@ const Events: NextPage = () => {
         )}
       </div>
       {/* ToDo Checkpoint 3: Uncomment Sell Token Events*/}
-      {/*<div className="mt-14">
+      <div className="mt-14">
         <div className="text-center mb-4">
           <span className="block text-2xl font-bold">Sell Token Events</span>
         </div>
@@ -112,7 +112,7 @@ const Events: NextPage = () => {
             </table>
           </div>
         )}
-      </div>*/}
+      </div>
     </div>
   );
 };
